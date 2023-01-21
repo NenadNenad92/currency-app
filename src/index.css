@@ -2,13 +2,13 @@
 
 /* base styles */
 body{
-  background-color: rgb(34, 34, 68);
+  background-color: rgb(37, 37, 78);
 }
 
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: rgb(255, 255, 255);
+  color: rgb(241, 241, 241);
 }
 .navbar {
   padding: 20px;
@@ -36,4 +36,26 @@ body{
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+  background-color: #dbdbdb;
+}
+
+/* blog previews / list */
+.token-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #777676;
+}
+.token-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.token-preview h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+
+.token-preview h3 {
+  font-size: 20px;
+  color: #292929;
+  margin-bottom: 8px;
 }
