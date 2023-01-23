@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Accordion, Card, Button } from "react-bootstrap";
+import Accordion from "./Accordion";
+import "./index.css";
+
 
 const Home = () => {
   const [currency, setCurrency] = useState();
@@ -16,7 +18,7 @@ const Home = () => {
   //Key Martin 3: 76D7319D-DFC5-45B2-AB15-20606E9BE1EE
 
   useEffect(() => {
-    fetch('https://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;ETH2;USDT;BNB;USDC;XRP;BUSD;ADA;DOGE&apikey=76D7319D-DFC5-45B2-AB15-20606E9BE1EE')
+    fetch('https://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;ETH2;USDT;BNB;USDC;XRP;BUSD;ADA;DOGE&apikey=1A46D162-2DB6-4EF5-95D5-98280226E903')
     .then(res => { return res.json();
     })
     .then(data => {
@@ -24,22 +26,20 @@ const Home = () => {
     });
   }, []);
 
+  const [active, setActive] = useState();
 
   return (
-    <div className="home">
-      {currency?.map((currency) => (
-        <Accordion defaultActiveKey="0" name="token-preview">
-          <Accordion.Item eventKey="0">
-           <Accordion.Header>{currency.name}</Accordion.Header>
-           <Accordion.Body>
-               Aktuller Wert: € {currency.price_usd}
-               Code: {currency.asset_id}
-               Datum: {currency.data_end}
-           </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
-))}
-</div>
+    <div className="accordion">
+      {currency?.map(currency => (
+              <Accordion 
+              name={currency.name}
+              price_usd={currency.price_usd}
+              asset_id={currency.asset_id}
+              data_end={currency.data_end} 
+              active={active} setActive={setActive}>
+              </Accordion> )
+        )}
+    </div>
   );
 } 
 
