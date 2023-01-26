@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* base styles */
 body{
   background-color: rgb(37, 37, 78);
 }
-
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   margin: 0;
   font-family: "Quicksand";
   color: rgb(241, 241, 241);
@@ -32,63 +33,27 @@ body{
 .navbar a:hover {
   color: #dbdbdb;
 }
-/*
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #dbdbdb;
-}
-*/
-/* blog previews / list 
-.acc {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #777676;
-}
-.token-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-}
-.token-preview h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
-}
-
-.token-preview h3 {
-  font-size: 20px;
-  color: #292929;
-  margin-bottom: 8px;
-}
-.container{
-  width: 100%;
-  max-width: 480px;
-  margin: auto;
-}
-*/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 .App{
   width: 100%;
   min-height: 100vh;
   padding: 20px 0;
   background:rgb(37, 37, 78)
 }
-.container{
+.container-title{
   width: 100%;
   max-width: 480px;
+  font-size: larger;
   margin: auto;
+}
+.container-detail{
+  width: 100%;
+  max-width: 480px;
+  margin: 20px 50px 25px;
 }
 .accordion{
   width:100%;
   max-width: 540px;
   margin: 18px auto;
-  color: rgb(253, 251, 251);
-  box-shadow: 1px 3px 5px rgba(253, 251, 251, 0.1);
 }
 .accordionHeader{
   background: #728acc;
@@ -96,7 +61,7 @@ body{
   color: rgb(243, 236, 236);
   font-weight: bold;
 }
-.accordionHeader .container{
+.accordionHeader .container-title{
   display: flex;
   align-items: center;
   justify-content: space-between;
