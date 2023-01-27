@@ -16,9 +16,12 @@ const Home = () => {
   //Key Anna: 034C8A7E-DA45-4019-9511-45B11E8A3796
   //Key Martin neu: 1A46D162-2DB6-4EF5-95D5-98280226E903
   //Key Martin 3: 76D7319D-DFC5-45B2-AB15-20606E9BE1EE
+  //Key Nenad: 57B90FE3-61EC-4BAB-A14C-53B32434A4FD
+  //Key Anna 2: 8BBF599C-332A-4827-8E90-4091100DC235
 
+  //https://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;ETH2;USDT;BNB;USDC;XRP;BUSD;ADA;DOGE&apikey=57B90FE3-61EC-4BAB-A14C-53B32434A4FD
   useEffect(() => {
-    fetch('https://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;ETH2;USDT;BNB;USDC;XRP;BUSD;ADA;DOGE&apikey=1A46D162-2DB6-4EF5-95D5-98280226E903')
+    fetch('https://rest.coinapi.io/v1/assets?filter_asset_id=BTC;ETH;ETH2;USDT;BNB;USDC;XRP;BUSD;ADA;DOGE&apikey=8BBF599C-332A-4827-8E90-4091100DC235')
     .then(res => { return res.json();
     })
     .then(data => {
