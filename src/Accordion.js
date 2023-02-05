@@ -2,9 +2,10 @@ import React from "react";
 import "./index.css";
 import { useEffect } from "react";
 import { useState } from "react";
+import Home from "./Home";
 
 const Accordion = ({name, active, setActive, price_usd, asset_id, data_end }) => {
-    let date = new Date().toJSON();
+    /*let date = new Date().toJSON();
     let yesterday = new Date();
     yesterday.setDate (yesterday.getDate() - 1);
     yesterday = yesterday.toJSON();
@@ -22,14 +23,15 @@ const Accordion = ({name, active, setActive, price_usd, asset_id, data_end }) =>
 
      var tendenz = parseFloat(((price_usd - oldvalue.rate)/oldvalue.rate)*100).toFixed(2);
      //console.log(oldvalue.rate);
-     //console.log(tendenz);
+     //console.log(tendenz); */
 
+     /* <li style={{color: {tendenz} <0? "green" : "red"}}> {tendenz}% </li> */
     return (
         
         <div className="accordion">
            <div className="accordionHeader">
                 <div className="container-title">
-                    <p>{name} <li style={{color: {tendenz} <0? "green" : "red"}}> {tendenz}% </li></p>
+                    <p>{name}</p>
                     <span onClick={() => setActive(name)}> {active === name ? "X" : "|||"} </span>
                 </div>
             </div> 
@@ -42,7 +44,8 @@ const Accordion = ({name, active, setActive, price_usd, asset_id, data_end }) =>
             </div>
         </div>
     )
-    setOldValue(null);
+
 }
     
 export default Accordion;
+
